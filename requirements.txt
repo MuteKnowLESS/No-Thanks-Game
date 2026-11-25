@@ -1,0 +1,5 @@
+# No third-party packages are needed: the project uses only the Python standard library
+# (random, abc, tkinter, socket, json, threading, queue, argparse).
+#
+# tkinter ships with Python on Windows and macOS. On some Linux distros install it separately,
+# e.g. Debian/Ubuntu:  sudo apt install python3-tk
