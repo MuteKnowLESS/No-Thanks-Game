@@ -3,6 +3,8 @@ import tkinter as tk
 
 from no_thanks import Community, Player, RandomPlayer
 
+from no_thanks_learning import GeneticPlayer
+#good_bot = GeneticPlayer.from_file("Evolved Bot", "best_weights.json")
 
 class GUIPlayer(Player):
     """Human player controlled by buttons instead of input().
@@ -76,7 +78,7 @@ class NoThanksApp:
         random.shuffle(deck)
         self.deck = deck[9:]  # 9 cards removed unseen
 
-        self.players = [GUIPlayer("You"), RandomPlayer("Bot 1"), RandomPlayer("Bot 2")]
+        self.players = [GUIPlayer("You"), GeneticPlayer.from_file("Evolved Bot 1", "best_weights.json"), GeneticPlayer.from_file("Evolved Bot 2", "best_weights.json")]
         self.human = self.players[0]
         self.community = Community()
         self.current = 0
